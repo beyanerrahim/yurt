@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="583.0" style="-fx-background-color: #eac9f2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Spor_salonuController">
+   <children>
+      <Pane layoutX="6.0" layoutY="76.0" prefHeight="534.0" prefWidth="174.0">
+         <children>
+            <TextField fx:id="T1" layoutX="3.0" layoutY="14.0" prefHeight="33.0" prefWidth="166.0" promptText="İD" />
+            <TextField fx:id="T5" layoutX="5.0" layoutY="188.0" prefHeight="33.0" prefWidth="166.0" promptText="ÜYE SAYISI" />
+            <TextField fx:id="T4" layoutX="3.0" layoutY="141.0" prefHeight="33.0" prefWidth="166.0" promptText="SPOR TİPİ" />
+            <TextField fx:id="T3" layoutX="3.0" layoutY="98.0" prefHeight="33.0" prefWidth="166.0" promptText="ALANI" />
+            <TextField fx:id="T2" layoutX="3.0" layoutY="57.0" prefHeight="33.0" prefWidth="166.0" promptText="SALON TİPİ" />
+            <Button layoutX="14.0" layoutY="237.0" mnemonicParsing="false" onAction="#ekle" prefHeight="33.0" prefWidth="68.0" text="ekle" textFill="#29a832">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="91.0" layoutY="237.0" mnemonicParsing="false" onAction="#sil" prefHeight="33.0" prefWidth="68.0" text="sil" textFill="#e12020">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="32.0" layoutY="276.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="33.0" prefWidth="108.0" text="güncelle" textFill="#2618bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="6.0" layoutY="490.0" mnemonicParsing="false" onAction="#Back" prefHeight="33.0" prefWidth="68.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="sportable" layoutX="182.0" layoutY="58.0" onMouseClicked="#getSelected" prefHeight="557.0" prefWidth="402.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="62.0" text="İD" />
+          <TableColumn fx:id="tip" prefWidth="79.0" text="SALON TİPİ" />
+            <TableColumn fx:id="alan" prefWidth="84.0" text="ALANI" />
+            <TableColumn fx:id="spor_tipi" prefWidth="89.0" text="SPOR TİPİ" />
+            <TableColumn fx:id="uye" prefWidth="85.0" text="ÜYE SAYISI" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="182.0" layoutY="25.0" onKeyPressed="#ara" prefHeight="33.0" prefWidth="306.0" promptText="SEARCH.........................." />
+      <Label layoutX="6.0" layoutY="25.0" prefHeight="41.0" prefWidth="166.0" text="Spor salonlar" textFill="#a42ea4">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

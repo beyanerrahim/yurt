@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="614.0" style="-fx-background-color: #fbcddf;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Dinlenme_odasiController">
+   <children>
+      <Pane layoutX="8.0" layoutY="63.0" prefHeight="525.0" prefWidth="179.0">
+         <children>
+            <TextField fx:id="T1" layoutX="10.0" layoutY="18.0" prefHeight="31.0" prefWidth="165.0" promptText="OAD NO" />
+            <TextField fx:id="T5" layoutX="10.0" layoutY="196.0" prefHeight="31.0" prefWidth="165.0" promptText="HALI RENGİ" />
+            <TextField fx:id="T4" layoutX="10.0" layoutY="148.0" prefHeight="31.0" prefWidth="165.0" promptText="KOLTUK SAYISI" />
+            <TextField fx:id="T3" layoutX="10.0" layoutY="104.0" prefHeight="31.0" prefWidth="165.0" promptText="ODA RENGİ" />
+            <TextField fx:id="T2" layoutX="10.0" layoutY="59.0" prefHeight="31.0" prefWidth="165.0" promptText="ODA TİPİ" />
+            <Button layoutX="23.0" layoutY="247.0" mnemonicParsing="false" onAction="#ekle" prefHeight="31.0" prefWidth="59.0" text="ekle" textFill="#19c925">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="90.0" layoutY="247.0" mnemonicParsing="false" onAction="#sil" prefHeight="31.0" prefWidth="59.0" text="sil" textFill="#dd0909">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="44.0" layoutY="289.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="31.0" prefWidth="91.0" text="güncelle" textFill="#3716bc">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="486.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="59.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="dinlenmetable" layoutX="191.0" layoutY="51.0" onMouseClicked="#getSelected" prefHeight="548.0" prefWidth="420.0">
+        <columns>
+          <TableColumn fx:id="oda_no" prefWidth="75.0" text="ODA NO" />
+          <TableColumn fx:id="oda_tip" prefWidth="75.0" text="ODA TİPİ" />
+            <TableColumn fx:id="oda_rengi" prefWidth="84.0" text="ODA RNGİ" />
+            <TableColumn fx:id="koltuk_sayisi" prefWidth="96.0" text="KOLTUK SAYISI" />
+            <TableColumn fx:id="hali_rengi" prefWidth="88.0" text="HALI RENGİ" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="191.0" layoutY="20.0" onKeyPressed="#ara" prefHeight="31.0" prefWidth="336.0" promptText="SEARCH......................." />
+      <Label layoutX="11.0" layoutY="20.0" prefHeight="38.0" prefWidth="173.0" text="Dinlenme odalar" textFill="#e42bd8">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

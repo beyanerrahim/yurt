@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.MainMenuController">
+   <children>
+      <ImageView fitHeight="578.0" fitWidth="710.0" layoutX="1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bb19008d-be2d-415b-a6f5-1c802f5bc679.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="171.0" layoutY="29.0" prefHeight="42.0" prefWidth="329.0" text="Yurt Kayıt Sistemi" textFill="#28e140">
+         <font>
+            <Font name="Constantia" size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="ogrenci" layoutX="135.0" layoutY="136.0" mnemonicParsing="false" onAction="#ogrenciler" prefHeight="48.0" prefWidth="94.0" text="öğrenci" textFill="#198a2e">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="135.0" layoutY="223.0" mnemonicParsing="false" onAction="#ogretmenler" prefHeight="48.0" prefWidth="94.0" text="öğretmen" textFill="#13862a">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="133.0" layoutY="299.0" mnemonicParsing="false" onAction="#yemekler" prefHeight="48.0" prefWidth="94.0" text="Yemek" textFill="#189724">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="389.0" layoutY="136.0" mnemonicParsing="false" onAction="#odalar" prefHeight="48.0" prefWidth="94.0" text="odalar" textFill="#168a1b">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="389.0" layoutY="217.0" mnemonicParsing="false" onAction="#salonler" prefHeight="48.0" prefWidth="94.0" text="salonlar" textFill="#148a3d">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="389.0" layoutY="299.0" mnemonicParsing="false" onAction="#Courseler" prefHeight="48.0" prefWidth="94.0" text="course" textFill="#17802c">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="566.0" layoutY="472.0" mnemonicParsing="false" onAction="#exit" prefHeight="48.0" prefWidth="84.0" text="Exit" textFill="#eb0808">
+         <font>
+            <Font name="Constantia" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

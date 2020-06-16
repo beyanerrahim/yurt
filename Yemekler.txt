@@ -1,0 +1,6 @@
+@1#pazartesi$20.05.2020%köfte,pilav^ayran&
+@2#sali$21.05.2020%salata,pilav^ayran&
+@3#çarşampa$22.05.2020%lahmacun^kola&
+@4#sali$23.05.2020%peynirli tost^çay&
+@5#cuma$24.05.2020%pide^kola&
+@6#cumartesi$25.05.2020%kuru fasülye^çay&

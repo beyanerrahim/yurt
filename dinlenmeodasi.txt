@@ -1,0 +1,4 @@
+@1#büyük$mavi%6^mavi&
+@2#kücük$yeşil%3^mavi&
+@3#küçük$beyaz%3^pembe&
+@4#büyük$sari%5^beyaz&

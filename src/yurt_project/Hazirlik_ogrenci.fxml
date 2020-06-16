@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="916.0" style="-fx-background-color: #81c8f2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Hazirlik_ogrenciController">
+   <children>
+      <Pane layoutX="8.0" layoutY="82.0" prefHeight="577.0" prefWidth="195.0">
+         <children>
+            <TextField fx:id="id1" layoutX="12.0" layoutY="14.0" prefHeight="34.0" prefWidth="172.0" promptText="ID" />
+            <TextField fx:id="dil_adi1" layoutX="12.0" layoutY="338.0" prefHeight="34.0" prefWidth="172.0" promptText="DIL ADI" />
+            <TextField fx:id="ucret1" layoutX="12.0" layoutY="289.0" prefHeight="34.0" prefWidth="172.0" promptText="UCRET" />
+            <TextField fx:id="ad_soyad1" layoutX="12.0" layoutY="58.0" prefHeight="34.0" prefWidth="172.0" promptText="AD SOYAD" />
+            <TextField fx:id="tc1" layoutX="12.0" layoutY="104.0" prefHeight="34.0" prefWidth="172.0" promptText="TC" />
+            <TextField fx:id="tel1" layoutX="12.0" layoutY="193.0" prefHeight="34.0" prefWidth="172.0" promptText="TELEFON" />
+            <TextField fx:id="email1" layoutX="12.0" layoutY="238.0" prefHeight="34.0" prefWidth="172.0" promptText="EMAIL" />
+            <TextField fx:id="yas1" layoutX="12.0" layoutY="148.0" prefHeight="34.0" prefWidth="172.0" promptText="YAS" />
+            <Button layoutX="17.0" layoutY="395.0" mnemonicParsing="false" onAction="#ekle" prefHeight="34.0" prefWidth="73.0" text="ekle" textFill="#27bf24">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="98.0" layoutY="395.0" mnemonicParsing="false" onAction="#sil" prefHeight="38.0" prefWidth="73.0" text="sil" textFill="#c91111">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="35.0" layoutY="439.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="41.0" prefWidth="110.0" text="güncelle" textFill="#3624d3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="525.0" mnemonicParsing="false" onAction="#Back" prefHeight="34.0" prefWidth="67.0" text="Back" textFill="#041725">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="hazirliktable" layoutX="214.0" layoutY="82.0" onMouseClicked="#getSelected" prefHeight="585.0" prefWidth="703.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="57.0" text="ID" />
+          <TableColumn fx:id="ad_soyad" prefWidth="101.0" text="AD SOYAD" />
+            <TableColumn fx:id="tc" prefWidth="97.0" text="TC" />
+            <TableColumn fx:id="yas" prefWidth="57.0" text="YAS" />
+            <TableColumn fx:id="tel" prefWidth="107.0" text="TELEFON" />
+            <TableColumn fx:id="email" prefWidth="135.0" text="EMAIL" />
+            <TableColumn fx:id="ucret" prefWidth="70.0" text="UCRET" />
+            <TableColumn fx:id="dil_adi" prefWidth="78.0" text="DIL ADI" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="214.0" layoutY="37.0" onKeyPressed="#ara" prefHeight="41.0" prefWidth="442.0" promptText="SEARCH............" />
+      <Label layoutX="3.0" layoutY="22.0" prefHeight="49.0" prefWidth="204.0" text="Hazırlık öğrenciler" textFill="#253abf">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

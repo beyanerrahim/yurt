@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="732.0" style="-fx-background-color: #cda8ab;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Kuran_kursuController">
+   <children>
+      <Pane layoutX="7.0" layoutY="90.0" prefHeight="542.0" prefWidth="181.0">
+         <children>
+            <TextField fx:id="id1" layoutX="8.0" layoutY="14.0" prefHeight="35.0" prefWidth="169.0" promptText="İD" />
+            <TextField fx:id="parca1" layoutX="8.0" layoutY="216.0" prefHeight="35.0" prefWidth="169.0" promptText="PARÇA SAYISI" />
+            <TextField fx:id="tarih1" layoutX="8.0" layoutY="161.0" prefHeight="35.0" prefWidth="169.0" promptText="BAŞLANGİÇ TARİHİ" />
+            <TextField fx:id="ad1" layoutX="8.0" layoutY="62.0" prefHeight="35.0" prefWidth="169.0" promptText="KURS ADI" />
+            <TextField fx:id="ogr_sayisi1" layoutX="8.0" layoutY="113.0" prefHeight="35.0" prefWidth="169.0" promptText="ÖĞRENCİ SAYISI" />
+            <Button layoutX="14.0" layoutY="278.0" mnemonicParsing="false" onAction="#ekle" prefHeight="37.0" prefWidth="69.0" text="ekle" textFill="#12ae31">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="91.0" layoutY="277.0" mnemonicParsing="false" onAction="#sil" prefHeight="35.0" prefWidth="69.0" text="sil" textFill="#cd1313">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="37.0" layoutY="323.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="38.0" prefWidth="98.0" text="güncelle" textFill="#3219bf">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="488.0" mnemonicParsing="false" onAction="#Back" prefHeight="35.0" prefWidth="62.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="kurantable" layoutX="192.0" layoutY="58.0" onMouseClicked="#getSelected" prefHeight="574.0" prefWidth="535.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="66.0" text="ID" />
+          <TableColumn fx:id="ad" prefWidth="106.0" text="KURS ADI" />
+            <TableColumn fx:id="ogr_sayisi" prefWidth="127.0" text="ÖĞRENCİ SAYISI" />
+            <TableColumn fx:id="tarih" prefWidth="141.0" text="BAŞLANGIÇ TARİHİ" />
+            <TableColumn fx:id="parca" prefWidth="92.0" text="PARÇA SAYISI" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="192.0" layoutY="23.0" onKeyPressed="#ara" prefHeight="35.0" prefWidth="402.0" promptText="SEARCH................" />
+      <Label layoutX="13.0" layoutY="22.0" prefHeight="44.0" prefWidth="169.0" text="Kuran Kursu" textFill="#862f3e">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

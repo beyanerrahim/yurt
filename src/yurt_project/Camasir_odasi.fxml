@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="619.0" style="-fx-background-color: #fbcddf;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Camasir_odasiController">
+   <children>
+      <Pane layoutX="14.0" layoutY="82.0" prefHeight="507.0" prefWidth="176.0">
+         <children>
+            <TextField fx:id="T1" layoutX="7.0" layoutY="17.0" prefHeight="31.0" prefWidth="162.0" promptText="ADA NO" />
+            <TextField fx:id="T5" layoutX="7.0" layoutY="202.0" prefHeight="31.0" prefWidth="162.0" promptText="MAKİNE RENGİ" />
+            <TextField fx:id="T4" layoutX="7.0" layoutY="152.0" prefHeight="31.0" prefWidth="162.0" promptText="MAKİNE SAYISI" />
+            <TextField fx:id="T2" layoutX="7.0" layoutY="61.0" prefHeight="31.0" prefWidth="162.0" promptText="ODA TİPİ" />
+            <TextField fx:id="T3" layoutX="7.0" layoutY="105.0" prefHeight="31.0" prefWidth="162.0" promptText="ODA RENGİ" />
+            <Button layoutX="14.0" layoutY="254.0" mnemonicParsing="false" onAction="#ekle" prefHeight="37.0" prefWidth="67.0" text="ekle" textFill="#21ae34">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="88.0" layoutY="254.0" mnemonicParsing="false" onAction="#sil" prefHeight="37.0" prefWidth="67.0" text="sil" textFill="#da1818">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="38.0" layoutY="301.0" mnemonicParsing="false" onAction="#guncelle" text="güncelle" textFill="#311ab5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="459.0" mnemonicParsing="false" onAction="#Back2" prefHeight="31.0" prefWidth="59.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="camasirtable" layoutX="190.0" layoutY="52.0" onMouseClicked="#getSelected" prefHeight="546.0" prefWidth="427.0">
+        <columns>
+          <TableColumn fx:id="oda_no" prefWidth="75.0" text="ODA NO" />
+          <TableColumn fx:id="oda_tip" prefWidth="75.0" text="ODA TİPİ" />
+            <TableColumn fx:id="oda_rengi" prefWidth="85.0" text="ODA RENGİ" />
+            <TableColumn fx:id="makine_sayisi" prefWidth="96.0" text="MAKİNE SAYISI " />
+            <TableColumn fx:id="makine_rengi" prefWidth="92.0" text="MAKİNE RENGİ" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="190.0" layoutY="21.0" onKeyPressed="#ara" prefHeight="31.0" prefWidth="316.0" promptText="SEARCH....................." />
+      <Label layoutX="16.0" layoutY="28.0" prefHeight="31.0" prefWidth="162.0" text="Çamaşır odalar" textFill="#e81fa8">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

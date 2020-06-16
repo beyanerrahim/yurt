@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1007.0" style="-fx-background-color: #81c8f2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Univer_ogrenciController">
+   <children>
+      <Pane layoutY="80.0" prefHeight="572.0" prefWidth="185.0">
+         <children>
+            <TextField fx:id="idU" layoutX="11.0" layoutY="14.0" prefHeight="31.0" prefWidth="166.0" promptText="ID" />
+            <TextField fx:id="bolum_adU" layoutX="10.0" layoutY="370.0" prefHeight="31.0" prefWidth="166.0" promptText="BOLUM ADI" />
+            <TextField fx:id="fak_adU" layoutX="11.0" layoutY="323.0" prefHeight="31.0" prefWidth="166.0" promptText="FAKULTE ADI" />
+            <TextField fx:id="ucretU" layoutX="11.0" layoutY="280.0" prefHeight="31.0" prefWidth="166.0" promptText="UCRET" />
+            <TextField fx:id="telU" layoutX="11.0" layoutY="185.0" prefHeight="31.0" prefWidth="166.0" promptText="TELEFON" />
+            <TextField fx:id="emailU" layoutX="11.0" layoutY="231.0" prefHeight="31.0" prefWidth="166.0" promptText="EMAIL" />
+            <TextField fx:id="adU" layoutX="11.0" layoutY="52.0" prefHeight="31.0" prefWidth="166.0" promptText="AD SOYAD" />
+            <TextField fx:id="tcU" layoutX="11.0" layoutY="98.0" prefHeight="31.0" prefWidth="166.0" promptText="TC" />
+            <TextField fx:id="yasU" layoutX="10.0" layoutY="142.0" prefHeight="31.0" prefWidth="166.0" promptText="YAS" />
+            <Button layoutX="17.0" layoutY="421.0" mnemonicParsing="false" onAction="#ekle" prefHeight="31.0" prefWidth="67.0" text="ekle" textFill="#30bf45">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutX="94.0" layoutY="419.0" mnemonicParsing="false" onAction="#sil" prefHeight="31.0" prefWidth="67.0" text="sil" textFill="#c73043">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="31.0" layoutY="471.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="39.0" prefWidth="112.0" text="guncelle" textFill="#2616bc">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="11.0" layoutY="521.0" mnemonicParsing="false" onAction="#Back" text="Back">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="univertable" layoutX="206.0" layoutY="52.0" onMouseClicked="#getSelected" prefHeight="599.0" prefWidth="804.0">
+        <columns>
+          <TableColumn fx:id="u_id" prefWidth="53.0" text="ID" />
+          <TableColumn fx:id="uad_soyad" prefWidth="127.0" text="AD SOYAD" />
+            <TableColumn fx:id="u_tc" prefWidth="92.0" text="TC" />
+            <TableColumn fx:id="u_yas" prefWidth="57.0" text="YAS" />
+            <TableColumn fx:id="u_tel" prefWidth="103.0" text="TELEFON" />
+            <TableColumn fx:id="u_email" prefWidth="129.0" text="EMAIL" />
+            <TableColumn fx:id="u_ucret" minWidth="4.0" prefWidth="69.0" text="UCRET" />
+            <TableColumn fx:id="ufakulte_adi" prefWidth="85.0" text="FAKULTE ADI" />
+            <TableColumn fx:id="ubolum_adi" prefWidth="88.0" text="BOLUM ADI" />
+        </columns>
+      </TableView>
+      <Label layoutX="11.0" layoutY="24.0" prefHeight="49.0" prefWidth="192.0" text="üniversite öğrenciler" textFill="#403aa8">
+         <font>
+            <Font name="Ebrima Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search" layoutX="206.0" layoutY="7.0" onKeyPressed="#ara" prefHeight="42.0" prefWidth="392.0" promptText="SEARCH............" />
+   </children>
+</Pane>

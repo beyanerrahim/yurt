@@ -1,0 +1,4 @@
+@1#büyük$pembe%4^3&mavi*
+@2#büyük$pembe%3^3&yeşil*
+@3#kücük$mavi%2^1&sari*
+@4#buyuk$kırmızı%4^2&pembe*

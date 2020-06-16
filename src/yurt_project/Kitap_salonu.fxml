@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="686.0" style="-fx-background-color: #eac9f2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Kitap_salonuController">
+   <children>
+      <Pane layoutX="14.0" layoutY="71.0" prefHeight="533.0" prefWidth="179.0">
+         <children>
+            <TextField fx:id="T1" layoutX="7.0" layoutY="15.0" prefHeight="34.0" prefWidth="165.0" promptText="İD" />
+            <TextField fx:id="T6" layoutX="7.0" layoutY="242.0" prefHeight="34.0" prefWidth="165.0" promptText="DURUM" />
+            <TextField fx:id="T5" layoutX="7.0" layoutY="196.0" prefHeight="34.0" prefWidth="165.0" promptText="KİTAP TİPİ" />
+            <TextField fx:id="T4" layoutX="7.0" layoutY="148.0" prefHeight="34.0" prefWidth="165.0" promptText="KİTAP SAYISI" />
+            <TextField fx:id="T2" layoutX="7.0" layoutY="59.0" prefHeight="34.0" prefWidth="165.0" promptText="SALON TİPİ" />
+            <TextField fx:id="T3" layoutX="7.0" layoutY="102.0" prefHeight="34.0" prefWidth="165.0" promptText="ALANI" />
+            <Button layoutX="14.0" layoutY="295.0" mnemonicParsing="false" onAction="#ekle" prefHeight="34.0" prefWidth="73.0" text="ekle" textFill="#2fab37">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="90.0" layoutY="295.0" mnemonicParsing="false" onAction="#sil" prefHeight="34.0" prefWidth="73.0" text="sil" textFill="#bf1414">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="40.0" layoutY="336.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="34.0" prefWidth="95.0" text="güncelle" textFill="#4515ab">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="8.0" layoutY="485.0" mnemonicParsing="false" onAction="#Back1" prefHeight="34.0" prefWidth="64.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="kitaptable" layoutX="193.0" layoutY="58.0" onMouseClicked="#getSelected" prefHeight="559.0" prefWidth="491.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="54.0" text="İD" />
+          <TableColumn fx:id="tip" prefWidth="88.0" text="SALON TİPİ" />
+            <TableColumn fx:id="alan" prefWidth="75.0" text="ALANI" />
+            <TableColumn fx:id="kitap_sayisi" text="KİTAP SAYISI" />
+            <TableColumn fx:id="kitap_tipi" prefWidth="127.0" text="KİTAP TİPİ" />
+            <TableColumn fx:id="durum" prefWidth="67.0" text="DURUM" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="193.0" layoutY="24.0" onKeyPressed="#ara" prefHeight="34.0" prefWidth="349.0" promptText="SEARCH........................." />
+      <Label layoutX="14.0" layoutY="24.0" prefHeight="34.0" prefWidth="165.0" text="Kitap salonu" textFill="#9f31b2">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

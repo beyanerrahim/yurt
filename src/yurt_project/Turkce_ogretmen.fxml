@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="697.0" style="-fx-background-color: #c5c9c5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Turkce_ogretmenController">
+   <children>
+      <Pane layoutX="8.0" layoutY="83.0" prefHeight="538.0" prefWidth="175.0">
+         <children>
+            <TextField fx:id="idT" layoutX="7.0" layoutY="14.0" prefHeight="31.0" prefWidth="162.0" promptText="İD" />
+            <TextField fx:id="milliT" layoutX="7.0" layoutY="226.0" prefHeight="31.0" prefWidth="162.0" promptText="MİLİYET" />
+            <TextField fx:id="uzmanlikT" layoutX="7.0" layoutY="184.0" prefHeight="31.0" prefWidth="162.0" promptText="UZMANLIK" />
+            <TextField fx:id="yilT" layoutX="7.0" layoutY="140.0" prefHeight="31.0" prefWidth="162.0" promptText="MEZUNİYET YILI" />
+            <TextField fx:id="adT" layoutX="7.0" layoutY="57.0" prefHeight="31.0" prefWidth="162.0" promptText="AD SOYAD" />
+            <TextField fx:id="telT" layoutX="7.0" layoutY="99.0" prefHeight="31.0" prefWidth="162.0" promptText="TELEFON" />
+            <Button layoutX="14.0" layoutY="276.0" mnemonicParsing="false" onAction="#ekle" prefHeight="31.0" prefWidth="67.0" text="ekle" textFill="#21b546">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="88.0" layoutY="276.0" mnemonicParsing="false" onAction="#sil" prefHeight="31.0" prefWidth="67.0" text="sil" textFill="#ed0e0e">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="37.0" layoutY="313.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="31.0" prefWidth="87.0" text="güncelle" textFill="#441dd0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="7.0" layoutY="493.0" mnemonicParsing="false" onAction="#Back5" prefHeight="31.0" prefWidth="61.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="ttable" layoutX="189.0" layoutY="51.0" onMouseClicked="#getSelected" prefHeight="570.0" prefWidth="507.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="51.0" text="İD" />
+          <TableColumn fx:id="ad" prefWidth="87.0" text="AD SOYAD" />
+            <TableColumn fx:id="tel" prefWidth="103.0" text="TELEFON" />
+            <TableColumn fx:id="yil" prefWidth="100.0" text="MEZUNİYET YILI" />
+            <TableColumn fx:id="uzmanlik" prefWidth="79.0" text="UZMANLIK" />
+            <TableColumn fx:id="milli" prefWidth="86.0" text="MİLLİYET" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="189.0" layoutY="13.0" onKeyPressed="#ara" prefHeight="38.0" prefWidth="355.0" promptText="SEARCH.............................." />
+      <Label layoutX="8.0" layoutY="22.0" prefHeight="38.0" prefWidth="175.0" text="Türkçe öğretmenler" textFill="#0a0c39">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

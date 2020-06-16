@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="648.0" style="-fx-background-color: #eac9f2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yurt_project.Konferens_salonuController">
+   <children>
+      <Pane layoutY="80.0" prefHeight="516.0" prefWidth="184.0">
+         <children>
+            <TextField fx:id="T1" layoutX="8.0" layoutY="14.0" prefHeight="31.0" prefWidth="168.0" promptText="İD" />
+            <TextField fx:id="T5" layoutX="8.0" layoutY="193.0" prefHeight="31.0" prefWidth="168.0" promptText="KONFERANS SAATİ" />
+            <TextField fx:id="T4" layoutX="8.0" layoutY="146.0" prefHeight="31.0" prefWidth="168.0" promptText="KONFERANS GÜNÜ" />
+            <TextField fx:id="T3" layoutX="8.0" layoutY="96.0" prefHeight="31.0" prefWidth="168.0" promptText="SALON RENGİ" />
+            <TextField fx:id="T2" layoutX="8.0" layoutY="55.0" prefHeight="31.0" prefWidth="168.0" promptText="SALON TİPİ" />
+            <Button layoutX="14.0" layoutY="246.0" mnemonicParsing="false" onAction="#ekle" prefHeight="31.0" prefWidth="69.0" text="ekle" textFill="#19a820">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="92.0" layoutY="246.0" mnemonicParsing="false" onAction="#sil" prefHeight="31.0" prefWidth="69.0" text="sil" textFill="#d71919">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="35.0" layoutY="285.0" mnemonicParsing="false" onAction="#guncelle" prefHeight="31.0" prefWidth="97.0" text="güncelle" textFill="#3c24b2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="9.0" layoutY="464.0" mnemonicParsing="false" onAction="#Back" prefHeight="39.0" prefWidth="62.0" text="Back">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="kontable" layoutX="184.0" layoutY="54.0" onMouseClicked="#getSelected" prefHeight="542.0" prefWidth="463.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="60.0" text="İD" />
+          <TableColumn fx:id="tip" prefWidth="82.0" text="SALON TİPİ" />
+            <TableColumn fx:id="alan" prefWidth="87.0" text="SALON RENGİ" />
+            <TableColumn fx:id="gun" prefWidth="116.0" text="KONFERANS GÜNÜ" />
+            <TableColumn fx:id="saat" prefWidth="117.0" text="KONFERANS SAATİ" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="184.0" layoutY="23.0" onKeyPressed="#ara" prefHeight="31.0" prefWidth="321.0" promptText="SEARCH....................." />
+      <Label layoutX="7.0" layoutY="25.0" prefHeight="39.0" prefWidth="168.0" text="Konferans salonlar" textFill="#892ab2">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
